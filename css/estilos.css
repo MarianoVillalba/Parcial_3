@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    background-color: #0496ff; /* Celeste claro */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Botón principal */
+form button {
+    background-color: #0095f8;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación de onda al hacer hover */
+form button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+form button:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px) scale(1.05); /* Subir un poco y aumentar el tamaño */
+}
+
+/* Botones dentro de las tareas */
+.tarea .btn {
+    margin-left: 10px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 150px; /* Establecer un tamaño fijo para los botones dentro de las tareas */
+    display: inline-block; /* Para asegurarse de que los botones estén en línea */
+    text-align: center; /* Centrar el texto dentro de los botones */
+}
+
+/* Botón primario */
+.tarea .btn-primary {
+    background-color: #3498db;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tarea .btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Botón de peligro */
+.tarea .btn-danger {
+    background-color: #e74c3c;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tarea .btn-danger:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Botón de información (ver PDF) */
+.tarea .btn-info {
+    background-color: #8e44ad;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.tarea .btn-info::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tarea .btn-info:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.tarea .btn-info:hover {
+    background-color: #9b59b6;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
